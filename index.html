@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <pre><h1>color(x) = A + Bcos(2pi(Cx+D))</h1></pre>
+    <section>
+        <canvas id="colorCanvas" width="1200" height="800"></canvas>
+
+        <!-- Controls for user to adjust A, B, C, D vectors -->
+        <div class="controls">
+            <h3>Adjust Parameters</h3>
+            <div class="slider-group">
+                <label for="A"><b>A</b></label>
+                <label for="A0">R</label>
+                <input type="range" id="A0" min="0" max="255" value="128">
+                <span id="A0Value">128</span>
+                <label for="A1">G</label>
+                <input type="range" id="A1" min="0" max="255" value="128">
+                <span id="A1Value">128</span>
+                <label for="A2">B</label>
+                <input type="range" id="A2" min="0" max="255" value="128">
+                <span id="A2Value">128</span>
+            </div>
+            <div class="slider-group">
+                <label for="B"><b>B</b></label>
+                <label for="B0">R</label>
+                <input type="range" id="B0" min="0" max="255" value="127">
+                <span id="B0Value">127</span>
+                <label for="B1">G</label>
+                <input type="range" id="B1" min="0" max="255" value="127">
+                <span id="B1Value">127</span>
+                <label for="B2">B</label>
+                <input type="range" id="B2" min="0" max="255" value="127">
+                <span id="B2Value">127</span>
+            </div>
+            <div class="slider-group">
+                <label for="C"><b>C</b></label>
+                <label for="C0">R</label>
+                <input type="range" id="C0" min="0" max="5" step="0.01" value="1">
+                <span id="C0Value">1.00</span>
+                <label for="C1">G</label>
+                <input type="range" id="C1" min="0" max="5" step="0.01" value="1">
+                <span id="C1Value">1.00</span>
+                <label for="C2">B</label>
+                <input type="range" id="C2" min="0" max="5" step="0.01" value="1">
+                <span id="C2Value">1.00</span>
+            </div>
+            <div class="slider-group">
+                <label for="D"><b>D</b></label>
+                <label for="D0">R</label>
+                <input type="range" id="D0" min="0" max="1" step="0.01" value="0">
+                <span id="D0Value">0.00</span>
+                <label for="D1">G</label>
+                <input type="range" id="D1" min="0" max="1" step="0.01" value="0">
+                <span id="D1Value">0.00</span>
+                <label for="D2">B</label>
+                <input type="range" id="D2" min="0" max="1" step="0.01" value="0">
+                <span id="D2Value">0.00</span>
+            </div>
+            <!-- Randomize Button -->
+            <button id="randomizeButton">Randomize</button>
+            <!-- Export Button -->
+            <button id="exportButton">Export Gradient</button>
+        </div>
+    </section>
+    <footer>
+        <small>
+            © <span id="year">2024</span>, <a href="https://github.com/AlmostDeadDude" target="_blank"
+                rel="noopener noreferrer">Ivan Shiller</a>
+        </small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
